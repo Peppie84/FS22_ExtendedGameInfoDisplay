@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="73">
+    <author>Peppie84</author>
+    <version>1.0.0</version>
+    <title>
+        <en>Extended-GameInfoDisplay</en>
+        <de>Erweitertes-GameInfoDisplay</de>
+        <fr>Avancé-GameInfoDisplay</fr>
+    </title>
+    <description>
+        <en>
+            <![CDATA[
+            Expands the current GameInfoDisplay in the upper right corner by displaying the current year under the date and activates a hidden temperature feature with an indicator of whether the temperature is falling, staying constant or rising, the display of the current temperature and the min/max temperature of the day.
+            ]]>
+        </en>
+        <de>
+            <![CDATA[
+            Erweitert die aktuelle GameInfoDisplay oben rechts um die Anzeige des aktuellen Jahres unter dem Datum und aktiviert ein verstecktes Temperaturfeature mit einem Indikator ob die Temepratur fällt, gleich bleibt oder steigt, die Anzeige der aktuellen Temperatur und der min/max Temperatur des Tages.
+            ]]>
+        </de>
+        <fr>
+            <![CDATA[
+            Développe le GameInfoDisplay actuel dans le coin supérieur droit en affichant l'année en cours sous la date et active une fonction de température cachée avec un indicateur indiquant si la température baisse, reste constante ou augmente, l'affichage de la température actuelle et la température min/max du jour.
+            ]]>
+        </fr>
+    </description>
+    <iconFilename>mod_icon.dds</iconFilename>
+
+    <multiplayer supported="true"/>
+
+    <extraSourceFiles>
+        <sourceFile filename="yearinfo.lua" />
+        <sourceFile filename="tempinfo.lua" />
+    </extraSourceFiles>
+
+    <l10n>
+        <text name="current_year">
+            <en>Year</en>
+            <de>Jahr</de>
+            <fr>Année</fr>
+        </text>
+    </l10n>
+
+</modDesc>
