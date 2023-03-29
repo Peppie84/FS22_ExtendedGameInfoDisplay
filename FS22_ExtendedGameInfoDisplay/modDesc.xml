@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
 <modDesc descVersion="73">
     <author>Peppie84</author>
-    <version>1.0.0</version>
+    <version>1.0.0.0</version>
     <title>
-        <en>Extended-GameInfoDisplay</en>
-        <de>Erweitertes-GameInfoDisplay</de>
+        <en>Extended Game Infodisplay</en>
+        <de>Erweiterte Spiel-Infodarstellung</de>
         <fr>Avancé-GameInfoDisplay</fr>
     </title>
     <description>
