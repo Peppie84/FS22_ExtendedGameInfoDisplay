@@ -5,7 +5,6 @@
     <title>
         <en>Extended Game Infodisplay</en>
         <de>Erweiterte Spiel-Infodarstellung</de>
-        <fr>Avancé-GameInfoDisplay</fr>
     </title>
     <description>
         <en>
@@ -18,11 +17,6 @@
             Erweitert die aktuelle GameInfoDisplay oben rechts um die Anzeige des aktuellen Jahres unter dem Datum und aktiviert ein verstecktes Temperaturfeature mit einem Indikator ob die Temepratur fällt, gleich bleibt oder steigt, die Anzeige der aktuellen Temperatur und der min/max Temperatur des Tages.
             ]]>
         </de>
-        <fr>
-            <![CDATA[
-            Développe le GameInfoDisplay actuel dans le coin supérieur droit en affichant l'année en cours sous la date et active une fonction de température cachée avec un indicateur indiquant si la température baisse, reste constante ou augmente, l'affichage de la température actuelle et la température min/max du jour.
-            ]]>
-        </fr>
     </description>
     <iconFilename>mod_icon.dds</iconFilename>
 
@@ -37,7 +31,6 @@
         <text name="current_year">
             <en>Year</en>
             <de>Jahr</de>
-            <fr>Année</fr>
         </text>
     </l10n>
 
