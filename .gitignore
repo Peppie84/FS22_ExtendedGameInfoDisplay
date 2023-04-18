@@ -3,7 +3,10 @@ luac.out
 
 # luarocks build files
 *.src.rock
+
+# archiv files
 *.zip
 *.tar.gz
 
+# repo specific
 .testrunner/
