@@ -7,12 +7,20 @@
     <de>Erweiterte Spiel-Infodarstellung</de>
   </title>
   <description>
-    <en><![CDATA[
-            Expands the current GameInfoDisplay in the upper right corner by displaying the current year under the date and activates a hidden temperature feature with an indicator of whether the temperature is falling, staying constant or rising, the display of the current temperature and the min/max temperature of the day.
-            ]]></en>
-    <de><![CDATA[
-            Erweitert die aktuelle GameInfoDisplay oben rechts um die Anzeige des aktuellen Jahres unter dem Datum und aktiviert ein verstecktes Temperaturfeature mit einem Indikator ob die Temepratur fällt, gleich bleibt oder steigt, die Anzeige der aktuellen Temperatur und der min/max Temperatur des Tages.
-            ]]></de>
+    <en>
+      <![CDATA[
+Expands the current GameInfoDisplay in the upper right corner by displaying the current year under the date and activates a hidden temperature feature with an indicator of whether the temperature is falling, staying constant or rising, the display of the current temperature. I also added the min/max temperature of the day.
+
+For more information, help, and reporting issues please visit <a href='https://github.com/Peppie23/FS22_ExtendedGameInfoDisplay'>GitHub</a>.
+]]>
+    </en>
+    <de>
+      <![CDATA[
+Erweitert die aktuelle GameInfoDisplay oben rechts um die Anzeige des aktuellen Jahres unter dem Datum und aktiviert ein verstecktes Temperaturfeature mit einem Indikator ob die Temepratur fällt, gleich bleibt oder steigt, die Anzeige der aktuellen Temperatur und der min/max Temperatur des Tages.
+
+Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/Peppie23/FS22_ExtendedGameInfoDisplay'>GitHub</a>.
+]]>
+    </de>
   </description>
   <iconFilename>mod_icon.dds</iconFilename>
   <multiplayer supported="true" />

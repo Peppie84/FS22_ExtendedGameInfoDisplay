@@ -1,42 +1,55 @@
 ---
--- Tempinfo
+-- TempInfo
 --
--- Main class for activating the vanilla Temp information box
+-- Main class for activating the vanilla temperature information box
 -- and changed the information text elements.
 --
 -- Copyright (c) Peppie84, 2021
 --
-tempInfo = {}
+TempInfo = {}
 
-function tempInfo:gameinfodisplay__setTemperatureVisible(oldfunc, isVisible)
-    self.showTemperature = true
-
-    self.temperatureBox:setVisible(true)
-    self:storeScaledValues()
-    self:updateSizeAndPositions()
+---Overwritten GameInfoDisplay:setTemperatureVisible()
+---Set the isVisible always to true.
+---@param overwrittenFunc function
+---@param isVisible boolean
+function TempInfo:gameinfodisplay__setTemperatureVisible(overwrittenFunc, isVisible)
+    overwrittenFunc(self, true)
 end
 
-function tempInfo:gameinfodisplay__updateTemperature()
-    local minTemp, maxTemp = self.environment.weather:getCurrentMinMaxTemperatures()
-    local currentTemp = self.environment.weather:getCurrentTemperature()
+---Overwritten GameInfoDisplay:updateTemperature()
+---Overwrite the vanilla day text with the current temperatur
+---and night text with the current min/max temperatur
+---@param overwrittenFunc function
+function TempInfo:gameinfodisplay__updateTemperature(overwrittenFunc)
+    overwrittenFunc(self)
 
-    self.temperatureDayText = string.format("%d°", currentTemp)
-    self.temperatureNightText = string.format("%d°/%d°", maxTemp, minTemp)
+    local minTemperatur, maxTemperatur = self.environment.weather:getCurrentMinMaxTemperatures()
+    local currentTemperatur = self.environment.weather:getCurrentTemperature()
 
-    local trend = self.environment.weather:getCurrentTemperatureTrend()
+    self.temperatureDayText = string.format("%d°", currentTemperatur)
+    self.temperatureNightText = string.format("%d°/%d°", maxTemperatur, minTemperatur)
+end
 
-    self.temperatureIconStable:setVisible(trend == 0)
-    self.temperatureIconRising:setVisible(trend > 0)
-    self.temperatureIconDropping:setVisible(trend < 0)
+---Overwritten GameInfoDisplay:drawTemperatureText()
+---Scale the night text smaller
+---@param overwrittenFunc function
+function TempInfo:gameinfodisplay__drawTemperatureText(overwrittenFunc)
+	setTextBold(false)
+	setTextAlignment(RenderText.ALIGN_RIGHT)
+	setTextColor(unpack(GameInfoDisplay.COLOR.TEXT))
+	renderText(self.temperatureHighTextPositionX, self.temperatureHighTextPositionY, self.temperatureTextSize, self.temperatureDayText)
+	renderText(self.temperatureLowTextPositionX, self.temperatureLowTextPositionY, self.temperatureTextSize - self:scalePixelToScreenHeight(5), self.temperatureNightText)
 end
 
 -- Overwrite the default GameInfoDisplay.setTemperatureVisible function
-GameInfoDisplay.setTemperatureVisible = Utils.overwrittenFunction(GameInfoDisplay.setTemperatureVisible, tempInfo.gameinfodisplay__setTemperatureVisible)
+GameInfoDisplay.setTemperatureVisible = Utils.overwrittenFunction(GameInfoDisplay.setTemperatureVisible, TempInfo.gameinfodisplay__setTemperatureVisible)
 -- Overwrite the default GameInfoDisplay.updateTemperature function
-GameInfoDisplay.updateTemperature = Utils.overwrittenFunction(GameInfoDisplay.updateTemperature, tempInfo.gameinfodisplay__updateTemperature)
+GameInfoDisplay.updateTemperature = Utils.overwrittenFunction(GameInfoDisplay.updateTemperature, TempInfo.gameinfodisplay__updateTemperature)
+-- Overwrite the default GameInfoDisplay.drawTemperatureText function
+GameInfoDisplay.drawTemperatureText = Utils.overwrittenFunction(GameInfoDisplay.drawTemperatureText, TempInfo.gameinfodisplay__drawTemperatureText)
 
 -- Change dimensions of the temp box
 GameInfoDisplay.SIZE.TEMPERATURE_BOX = {
-    105,
+    95,
     GameInfoDisplay.BOX_HEIGHT
 }
