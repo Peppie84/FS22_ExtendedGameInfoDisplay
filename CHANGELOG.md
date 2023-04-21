@@ -7,6 +7,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - Added github link to modDesc.xml
 - Refactored TempInfo.lua
 - Decreased TempInfo min/max temperatur font size
+- Added Settings area to disable temp info - for #1
 
 ## [1.0.0.0] - 2023-04-17
 
