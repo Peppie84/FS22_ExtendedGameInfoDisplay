@@ -10,3 +10,7 @@ luac.out
 
 # repo specific
 .testrunner/
+
+# Giants debugger
+*.gdpu
+*.gdp
