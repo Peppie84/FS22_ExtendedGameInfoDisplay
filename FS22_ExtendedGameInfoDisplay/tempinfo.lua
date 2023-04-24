@@ -13,7 +13,7 @@ TempInfo = {}
 ---@param overwrittenFunc function
 ---@param isVisible boolean
 function TempInfo:gameinfodisplay__setTemperatureVisible(overwrittenFunc, isVisible)
-    overwrittenFunc(self, true)
+    overwrittenFunc(self, ExtendedGameInfoDisplayGui.settings.temperaturVisible)
 end
 
 ---Overwritten GameInfoDisplay:updateTemperature()
@@ -50,6 +50,6 @@ GameInfoDisplay.drawTemperatureText = Utils.overwrittenFunction(GameInfoDisplay.
 
 -- Change dimensions of the temp box
 GameInfoDisplay.SIZE.TEMPERATURE_BOX = {
-    95,
+    92,
     GameInfoDisplay.BOX_HEIGHT
 }
