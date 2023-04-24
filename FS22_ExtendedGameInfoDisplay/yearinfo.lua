@@ -6,10 +6,16 @@
 --
 -- Copyright (c) Peppie84, 2021
 --
-YearInfo = {}
-YearInfo.currentModName = g_currentModName or 'unknown'
+YearInfo = {
+    L10N_SYMBOL = {
+        YEAR_TEXT = "yearinfo_current_year"
+    },
+    CURRENT_MOD = g_currentModName or 'unknown'
+}
 
----TODO
+---Overwritten GameInfoDisplay.drawDateText()
+---Overwrite the vanilla drawDateText function to append the
+---current year under the current month.
 ---@param overwrittenFunc function
 function YearInfo:gameinfodisplay__drawDateText(overwrittenFunc)
     setTextBold(false)
@@ -25,7 +31,7 @@ function YearInfo:gameinfodisplay__drawDateText(overwrittenFunc)
     local textPositionYForMonth = self.monthTextPositionY + (scaledTextSizeForMonth * 0.5)
     local textPositionYForYear = self.monthTextPositionY - (scaledTextSizeForMonth * 0.30)
 
-    local l10nTextYear = g_i18n:getText(YearInfo.L10N_SYMBOL.YEAR_TEXT, YearInfo.currentModName)
+    local l10nTextYear = g_i18n:getText(YearInfo.L10N_SYMBOL.YEAR_TEXT, YearInfo.CURRENT_MOD)
 
     --
     renderText(self.monthTextPositionX, textPositionYForMonth, scaledTextSizeForMonth, self.monthText)
@@ -34,7 +40,3 @@ end
 
 -- Overwrite the default GameInfoDisplay.drawDateText function
 GameInfoDisplay.drawDateText = Utils.overwrittenFunction(GameInfoDisplay.drawDateText, YearInfo.gameinfodisplay__drawDateText)
-
-YearInfo.L10N_SYMBOL = {
-    YEAR_TEXT = "current_year"
-}

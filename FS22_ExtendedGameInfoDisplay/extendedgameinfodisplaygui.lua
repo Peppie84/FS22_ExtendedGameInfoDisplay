@@ -10,6 +10,22 @@ ExtendedGameInfoDisplayGui = {
     MOD_SETTINGS_DIRECTORY = g_currentModSettingsDirectory .. '../',
     MOD_SETTINGS_FILENAME = 'ExtendedGameInfoDisplay.xml',
     MOD_SETTINGS_XML_ROOT_NODE = 'settings',
+    CURRENT_MOD = g_currentModName or 'unknown',
+    L10N_SYMBOL = {
+        MOD_TITLE = 'mod_title',
+        TEMPERATURE_SETTING_LABEL = 'settings_temperature_label',
+        TEMPERATURE_SETTING_DESCRIPTION = 'settings_temperature_description',
+        EASYARMCONTROL_TEMPERATURE_OPTION1 = 'settings_temperature_option1',
+        EASYARMCONTROL_TEMPERATURE_OPTION2 = 'settings_temperature_option2',
+    },
+    EASYARMCONTROL_INDEX = {
+        LABEL = 4,
+        DESCRIPTION = 6,
+    },
+    ENUM_TEMPERATURE_VIEW_STATE = {
+        ON = 1,
+        OFF = 2,
+    }
 }
 
 ExtendedGameInfoDisplayGui.settings = {}
@@ -19,33 +35,33 @@ ExtendedGameInfoDisplayGui.settings.temperaturVisible = true
 ---Initialize our gui elements for the settings frame that we need.
 function ExtendedGameInfoDisplayGui:initGui()
     if not self.initGuiDone then
-        local target = ExtendedGameInfoDisplayGui
+        local title = TextElement.new()
+        local temperaturSettingTitleText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.MOD_TITLE, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingLabelText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.TEMPERATURE_SETTING_LABEL, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingDescriptionText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.TEMPERATURE_SETTING_DESCRIPTION, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingOption1Text = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.EASYARMCONTROL_TEMPERATURE_OPTION1, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingOption2Text = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.EASYARMCONTROL_TEMPERATURE_OPTION2, ExtendedGameInfoDisplayGui.CURRENT_MOD)
 
         self.ExtendedGameInfoDisplay = self.checkUseEasyArmControl:clone()
-        self.ExtendedGameInfoDisplay.target = target
-        self.ExtendedGameInfoDisplay.id = "ExtendedGameInfoDisplay"
-        self.ExtendedGameInfoDisplay:setCallback("onClickCallback", "onExtendedGameInfoDisplayChanged")
+        self.ExtendedGameInfoDisplay.target = ExtendedGameInfoDisplayGui
+        self.ExtendedGameInfoDisplay.id = 'ExtendedGameInfoDisplay'
+        self.ExtendedGameInfoDisplay:setCallback('onClickCallback', 'onExtendedGameInfoDisplayChanged')
+        self.ExtendedGameInfoDisplay:setTexts({temperaturSettingOption1Text, temperaturSettingOption2Text})
+        self.ExtendedGameInfoDisplay.elements[ExtendedGameInfoDisplayGui.EASYARMCONTROL_INDEX.LABEL]:setText(temperaturSettingLabelText)
+        self.ExtendedGameInfoDisplay.elements[ExtendedGameInfoDisplayGui.EASYARMCONTROL_INDEX.DESCRIPTION]:setText(temperaturSettingDescriptionText)
 
-        self.ExtendedGameInfoDisplay.elements[4]:setText('Temperatuanzeige')
-        self.ExtendedGameInfoDisplay.elements[6]:setText('Steuert die Anzeige der aktuellen Temperatur oben rechts im Hud.')
-
-        local title = TextElement.new()
         title:applyProfile('settingsMenuSubtitle', true)
-        title:setText('Erweiterte Spiel-Infodarstellung')
+        title:setText(temperaturSettingTitleText)
 
         self.boxLayout:addElement(title)
         self.boxLayout:addElement(self.ExtendedGameInfoDisplay)
 
-		self.ExtendedGameInfoDisplay:setTexts({
-            "Eingeblendet",
-            "Ausgeblendet"
-        })
-        local state = 1
+        local state = ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.ON
         if ExtendedGameInfoDisplayGui.settings.temperaturVisible == false then
-            state = 2
+            state = ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.OFF
         end
-		self.ExtendedGameInfoDisplay:setState(state)
 
+		self.ExtendedGameInfoDisplay:setState(state)
         self.initGuiDone = true
     end
 end
@@ -54,9 +70,10 @@ end
 ---@param state number
 function ExtendedGameInfoDisplayGui:onExtendedGameInfoDisplayChanged(state)
 	ExtendedGameInfoDisplayGui.settings.temperaturVisible = true
-    if state == 2 then
+    if state == ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.OFF then
         ExtendedGameInfoDisplayGui.settings.temperaturVisible = false
     end
+
 	ExtendedGameInfoDisplayGui:saveSettings()
     g_currentMission.hud.gameInfoDisplay:setTemperatureVisible(nil)
 end
@@ -65,7 +82,7 @@ end
 ---Just udpate the gui
 function ExtendedGameInfoDisplayGui:updateGui()
     if self.initGuiDone and self.ExtendedGameInfoDisplay ~= nil then
-        self.ExtendedGameInfoDisplay:setState(1)
+        self.ExtendedGameInfoDisplay:setState(ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.ON)
     end
 end
 
