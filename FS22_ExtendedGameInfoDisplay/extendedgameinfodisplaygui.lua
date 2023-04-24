@@ -1,7 +1,9 @@
 ---
 -- ExtendedGameInfoDisplayGui
 --
--- TODO
+-- Class to handle the new ui controls on the settings frame
+-- to control the temperature info on & off and saves the
+-- value in the modSettings-folder.
 --
 -- Copyright (c) Peppie84, 2023
 --
@@ -29,7 +31,7 @@ ExtendedGameInfoDisplayGui = {
 }
 
 ExtendedGameInfoDisplayGui.settings = {}
-ExtendedGameInfoDisplayGui.settings.temperaturVisible = true
+ExtendedGameInfoDisplayGui.settings.temperatureVisibility = true
 
 ---Append to InGameMenuGeneralSettingsFrame.onFrameOpen
 ---Initialize our gui elements for the settings frame that we need.
@@ -57,7 +59,7 @@ function ExtendedGameInfoDisplayGui:initGui()
         self.boxLayout:addElement(self.ExtendedGameInfoDisplay)
 
         local state = ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.ON
-        if ExtendedGameInfoDisplayGui.settings.temperaturVisible == false then
+        if ExtendedGameInfoDisplayGui.settings.temperatureVisibility == false then
             state = ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.OFF
         end
 
@@ -69,9 +71,9 @@ end
 ---Callback function for our gui element by on change
 ---@param state number
 function ExtendedGameInfoDisplayGui:onExtendedGameInfoDisplayChanged(state)
-	ExtendedGameInfoDisplayGui.settings.temperaturVisible = true
+	ExtendedGameInfoDisplayGui.settings.temperatureVisibility = true
     if state == ExtendedGameInfoDisplayGui.ENUM_TEMPERATURE_VIEW_STATE.OFF then
-        ExtendedGameInfoDisplayGui.settings.temperaturVisible = false
+        ExtendedGameInfoDisplayGui.settings.temperatureVisibility = false
     end
 
 	ExtendedGameInfoDisplayGui:saveSettings()
@@ -93,7 +95,7 @@ function ExtendedGameInfoDisplayGui:saveSettings()
 	local xmlFile = XMLFile.create("settingsXML", filename, xmlRootNode)
 
 	if xmlFile ~= nil then
-		xmlFile:setBool(xmlRootNode .. ".temperaturVisible", self.settings.temperaturVisible)
+		xmlFile:setBool(xmlRootNode .. ".temperatureVisibility", self.settings.temperatureVisibility)
 
 		xmlFile:save()
 		xmlFile:delete()
@@ -107,7 +109,7 @@ function ExtendedGameInfoDisplayGui:loadSettings()
 	local xmlFile = XMLFile.loadIfExists("settingsXML", filename, xmlRootNode)
 
 	if xmlFile ~= nil then
-		ExtendedGameInfoDisplayGui.settings.temperaturVisible = Utils.getNoNil(xmlFile:getBool(xmlRootNode .. ".temperaturVisible"), true)
+		ExtendedGameInfoDisplayGui.settings.temperatureVisibility = Utils.getNoNil(xmlFile:getBool(xmlRootNode .. ".temperatureVisibility"), true)
 
 		xmlFile:delete()
 	end

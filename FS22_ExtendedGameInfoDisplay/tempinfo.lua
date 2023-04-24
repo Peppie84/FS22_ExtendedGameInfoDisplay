@@ -13,7 +13,7 @@ TempInfo = {}
 ---@param overwrittenFunc function
 ---@param isVisible boolean
 function TempInfo:gameinfodisplay__setTemperatureVisible(overwrittenFunc, isVisible)
-    overwrittenFunc(self, ExtendedGameInfoDisplayGui.settings.temperaturVisible)
+    overwrittenFunc(self, ExtendedGameInfoDisplayGui.settings.temperatureVisibility)
 end
 
 ---Overwritten GameInfoDisplay:updateTemperature()
