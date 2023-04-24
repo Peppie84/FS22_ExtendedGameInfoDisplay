@@ -13,14 +13,14 @@ ExtendedGameInfoDisplayGui = {
     MOD_SETTINGS_FILENAME = 'ExtendedGameInfoDisplay.xml',
     MOD_SETTINGS_XML_ROOT_NODE = 'settings',
     CURRENT_MOD = g_currentModName or 'unknown',
-    L10N_SYMBOL = {
+    L10N_SYMBOLS = {
         MOD_TITLE = 'mod_title',
         TEMPERATURE_SETTING_LABEL = 'settings_temperature_label',
         TEMPERATURE_SETTING_DESCRIPTION = 'settings_temperature_description',
         EASYARMCONTROL_TEMPERATURE_OPTION1 = 'settings_temperature_option1',
         EASYARMCONTROL_TEMPERATURE_OPTION2 = 'settings_temperature_option2',
     },
-    EASYARMCONTROL_INDEX = {
+    ENUM_EASYARMCONTROL_INDEX = {
         LABEL = 4,
         DESCRIPTION = 6,
     },
@@ -38,19 +38,19 @@ ExtendedGameInfoDisplayGui.settings.temperatureVisibility = true
 function ExtendedGameInfoDisplayGui:initGui()
     if not self.initGuiDone then
         local title = TextElement.new()
-        local temperaturSettingTitleText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.MOD_TITLE, ExtendedGameInfoDisplayGui.CURRENT_MOD)
-        local temperaturSettingLabelText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.TEMPERATURE_SETTING_LABEL, ExtendedGameInfoDisplayGui.CURRENT_MOD)
-        local temperaturSettingDescriptionText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.TEMPERATURE_SETTING_DESCRIPTION, ExtendedGameInfoDisplayGui.CURRENT_MOD)
-        local temperaturSettingOption1Text = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.EASYARMCONTROL_TEMPERATURE_OPTION1, ExtendedGameInfoDisplayGui.CURRENT_MOD)
-        local temperaturSettingOption2Text = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOL.EASYARMCONTROL_TEMPERATURE_OPTION2, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingTitleText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOLS.MOD_TITLE, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingLabelText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOLS.TEMPERATURE_SETTING_LABEL, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingDescriptionText = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOLS.TEMPERATURE_SETTING_DESCRIPTION, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingOption1Text = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOLS.EASYARMCONTROL_TEMPERATURE_OPTION1, ExtendedGameInfoDisplayGui.CURRENT_MOD)
+        local temperaturSettingOption2Text = g_i18n:getText(ExtendedGameInfoDisplayGui.L10N_SYMBOLS.EASYARMCONTROL_TEMPERATURE_OPTION2, ExtendedGameInfoDisplayGui.CURRENT_MOD)
 
         self.ExtendedGameInfoDisplay = self.checkUseEasyArmControl:clone()
         self.ExtendedGameInfoDisplay.target = ExtendedGameInfoDisplayGui
         self.ExtendedGameInfoDisplay.id = 'ExtendedGameInfoDisplay'
         self.ExtendedGameInfoDisplay:setCallback('onClickCallback', 'onExtendedGameInfoDisplayChanged')
         self.ExtendedGameInfoDisplay:setTexts({temperaturSettingOption1Text, temperaturSettingOption2Text})
-        self.ExtendedGameInfoDisplay.elements[ExtendedGameInfoDisplayGui.EASYARMCONTROL_INDEX.LABEL]:setText(temperaturSettingLabelText)
-        self.ExtendedGameInfoDisplay.elements[ExtendedGameInfoDisplayGui.EASYARMCONTROL_INDEX.DESCRIPTION]:setText(temperaturSettingDescriptionText)
+        self.ExtendedGameInfoDisplay.elements[ExtendedGameInfoDisplayGui.ENUM_EASYARMCONTROL_INDEX.LABEL]:setText(temperaturSettingLabelText)
+        self.ExtendedGameInfoDisplay.elements[ExtendedGameInfoDisplayGui.ENUM_EASYARMCONTROL_INDEX.DESCRIPTION]:setText(temperaturSettingDescriptionText)
 
         title:applyProfile('settingsMenuSubtitle', true)
         title:setText(temperaturSettingTitleText)

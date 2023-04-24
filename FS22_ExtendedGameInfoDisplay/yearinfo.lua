@@ -7,7 +7,7 @@
 -- Copyright (c) Peppie84, 2021
 --
 YearInfo = {
-    L10N_SYMBOL = {
+    L10N_SYMBOLS = {
         YEAR_TEXT = "yearinfo_current_year"
     },
     CURRENT_MOD = g_currentModName or 'unknown'
@@ -31,7 +31,7 @@ function YearInfo:gameinfodisplay__drawDateText(overwrittenFunc)
     local textPositionYForMonth = self.monthTextPositionY + (scaledTextSizeForMonth * 0.5)
     local textPositionYForYear = self.monthTextPositionY - (scaledTextSizeForMonth * 0.30)
 
-    local l10nTextYear = g_i18n:getText(YearInfo.L10N_SYMBOL.YEAR_TEXT, YearInfo.CURRENT_MOD)
+    local l10nTextYear = g_i18n:getText(YearInfo.L10N_SYMBOLS.YEAR_TEXT, YearInfo.CURRENT_MOD)
 
     --
     renderText(self.monthTextPositionX, textPositionYForMonth, scaledTextSizeForMonth, self.monthText)
