@@ -5,7 +5,7 @@
     <e k="mod_title" v="Rozšířený herní info displej"/>
     <e k="yearinfo_current_year" v="Rok"/>
     <e k="settings_temperature_label" v="Teplota"/>
-    <e k="settings_temperature_description" v="Přepíná pohled na aktuální, min & amp; maximální teplotu v pravém horním rohu HUD."/>
+    <e k="settings_temperature_description" v="Přepíná pohled na aktuální, min &amp; maximální teplotu v pravém horním rohu HUD."/>
     <e k="settings_temperature_option1" v="Zap"/>
     <e k="settings_temperature_option2" v="Vyp"/>
   </elements>
