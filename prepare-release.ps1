@@ -16,6 +16,12 @@ if (([string]::IsNullOrEmpty($newVersion)))
     $newVersion = "$currentVersion"
 }
 
+# Check if we have a update version
+if ( $newVersion -ne "1.0.0.0" )
+{
+    $modName = "$($modName)_update"
+}
+
 # Write new moddesc version
 $xmlData = [xml] (Get-Content $modDescFileName -Encoding UTF8)
 $xmlData.modDesc.version = "$newVersion"
