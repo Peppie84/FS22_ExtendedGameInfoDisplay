@@ -5,8 +5,7 @@
     <e k="mod_title" v="Kibővített Információs Sáv"/>
     <e k="yearinfo_current_year" v="Év"/>
     <e k="settings_temperature_label" v="Hőmérséklet"/>
-    <e k="settings_temperature_description" v="Toggles view of the current, min &amp; max temperature on the upper right corner hud."/>
-    <e k="settings_temperature_description" v="Kapcsolja az aktuális min &amp; max hőmérsékletet az információs sáv jobb felső sarkában"/>
+    <e k="settings_temperature_description" v="Kapcsolja az aktuális min &amp; max hőmérsékletet az információs sáv jobb felső sarkában."/>
     <e k="settings_temperature_option1" v="Be"/>
     <e k="settings_temperature_option2" v="Ki"/>
   </elements>
