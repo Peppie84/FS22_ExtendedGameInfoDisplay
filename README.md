@@ -4,6 +4,9 @@
 [![Modhub Version](https://img.shields.io/badge/Modhub-v1.1.0.0-green?style=flat-square)](https://farming-simulator.com/mod.php?mod_id=267536)
 [![GitHub issues](https://img.shields.io/github/issues/Peppie84/FS22_ExtendedGameInfoDisplay?style=flat-square)](https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay/issues)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0)
+![Last commit](https://img.shields.io/github/last-commit/Peppie84/FS22_ExtendedGameInfoDisplay?style=flat-square&color=important)
+![Top language](https://img.shields.io/github/languages/top/Peppie84/FS22_ExtendedGameInfoDisplay?style=flat-square&color=blueviolet)
+
 
 <br />
 <div align="center">
