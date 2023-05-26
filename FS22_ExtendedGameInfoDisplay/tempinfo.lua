@@ -21,6 +21,10 @@ end
 ---and night text with the current min/max temperatur
 ---@param overwrittenFunc function
 function TempInfo:gameinfodisplay__updateTemperature(overwrittenFunc)
+    if g_currentMission.gameStarted == false then
+        return
+    end
+
     overwrittenFunc(self)
 
     local minTemperatur, maxTemperatur = self.environment.weather:getCurrentMinMaxTemperatures()
