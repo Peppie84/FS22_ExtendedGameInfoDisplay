@@ -1,5 +1,8 @@
 <a name="readme-top"></a>
 
+
+<div align="center">
+
 [![FarmingSimulator-22](https://img.shields.io/badge/FarmingSimulator-22-blue?style=flat-square)](https://www.farming-simulator.com/)
 [![Modhub Version](https://img.shields.io/badge/Modhub-v1.1.0.0-green?style=flat-square)](https://farming-simulator.com/mod.php?mod_id=267536)
 [![GitHub issues](https://img.shields.io/github/issues/Peppie84/FS22_ExtendedGameInfoDisplay?style=flat-square)](https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay/issues)
@@ -9,7 +12,6 @@
 
 
 <br />
-<div align="center">
 
 <a href="https://farming-simulator.com/mod.php?mod_id=267536">
     <img src="documents/icon_ExGameInfoDisp.jpg" style="width: 128px;">
