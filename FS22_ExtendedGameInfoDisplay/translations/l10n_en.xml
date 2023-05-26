@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <translationContributors>Peppie84</translationContributors>
+  <elements>
+    <e k="mod_title" v="Extended Game Infodisplay"/>
+    <e k="yearinfo_current_year" v="Year"/>
+    <e k="settings_temperature_label" v="Temperature"/>
+    <e k="settings_temperature_description" v="Toggles view of the current, min &amp; max temperature on the upper right corner hud."/>
+    <e k="settings_temperature_option1" v="On"/>
+    <e k="settings_temperature_option2" v="Off"/>
+  </elements>
+</l10n>

@@ -1,7 +1,7 @@
 #
 # Use this script to generate a zip file to upload to farmingsimulators modhub
 #
-$modDirectory = "FS22_ExtendedGameInfoDisplay"
+$modDirectory = Split-Path -Path $pwd -Leaf
 $modName = "$modDirectory";
 $modDescFileName = "$modDirectory/modDesc.xml"
 $testRunnerLogPath = ".\.testrunner\"
@@ -14,6 +14,12 @@ $newVersion = read-host -Prompt "Please enter a new version (like: a.b.c.d). Cur
 if (([string]::IsNullOrEmpty($newVersion)))
 {
     $newVersion = "$currentVersion"
+}
+
+# Check if we have a update version
+if ( $newVersion -ne "1.0.0.0" )
+{
+    $modName = "$($modName)_update"
 }
 
 # Write new moddesc version
