@@ -9,7 +9,7 @@
 <div align="center">
 
 <a href="https://farming-simulator.com/mod.php?mod_id=267536">
-    <img src="documents/mod_icon.jpg" style="width: 128px;">
+    <img src="documents/icon_ExGameInfoDisp.jpg" style="width: 128px;">
 </a>
 
 <h3 align="center"><u>FS22_ExtendedGameInfoDisplay</u></h3>
