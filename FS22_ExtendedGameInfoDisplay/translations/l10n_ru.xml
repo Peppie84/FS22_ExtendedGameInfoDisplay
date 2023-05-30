@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <translationContributors>nagor</translationContributors>
+  <elements>
+    <e k="mod_title" v="Extended Game Infodisplay"/>
+    <e k="yearinfo_current_year" v="Год"/>
+    <e k="settings_temperature_label" v="Температура"/>
+    <e k="settings_temperature_description" v="Переключение отображения текущей, минимальной/максимальной температур в правом верхнем углу экрана."/>
+    <e k="settings_temperature_option1" v="Вкл"/>
+    <e k="settings_temperature_option2" v="Выкл"/>
+  </elements>
+</l10n>
