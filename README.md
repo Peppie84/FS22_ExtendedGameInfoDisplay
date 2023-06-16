@@ -26,7 +26,7 @@
 </div>
 
 <div align='center'>
-    <img src="documents/screen1.png" style="width: 50%;">
+    <img src="documents/screen2-v1.2.0.0.png" style="width: 50%;">
 </div>
 
 ## Credits
