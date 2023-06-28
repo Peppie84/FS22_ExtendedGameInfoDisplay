@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<modDesc descVersion="74">
+<modDesc descVersion="75">
   <author>Peppie84</author>
-  <version>1.1.0.0</version>
+  <version>1.2.0.0</version>
   <title>
     <en>Extended Game Infodisplay</en>
     <de>Erweiterte Spiel-Infodarstellung</de>
@@ -10,20 +10,32 @@
     <en><![CDATA[
 Expands the current GameInfoDisplay in the upper right corner by displaying the current year under the date and activates a hidden temperature feature with an indicator of whether the temperature is falling, staying constant or rising, the display of the current temperature. I also added the min/max temperature of the day.
 
+Changelog v1.2.0.0
+- Added HU translation
+- Added RU translation
+- Fixed lua error while connecting to dedi-server
+- Display temperature also in Fahrenheit if set via settings
+
 Changelog v1.1.0.0
 - Decreased min/max temperature font size
 - Added settings area to en-/disable temperature info
-- Added CZ translations
+- Added CZ translation
 
 For more information, help, and reporting issues please visit <a href='https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay'>GitHub</a>.
 ]]>    </en>
     <de><![CDATA[
 Erweitert die aktuelle GameInfoDisplay oben rechts um die Anzeige des aktuellen Jahres unter dem Datum und aktiviert ein verstecktes Temperaturfeature mit einem Indikator ob die Temepratur fällt, gleich bleibt oder steigt, die Anzeige der aktuellen Temperatur und der min/max Temperatur des Tages.
 
+Changelog v1.2.0.0
+- HU Übersetzung hinzugefügt
+- RU Übersetzung hinzugefügt
+- Lua Error behoben der beim verbinden auf einen Dedi-Server geworfen wurde
+- Die Temperatur wird auch in Fahrenheit angezeigt wenn es in den Einstellungen aktiviert wurde
+
 Changelog v1.1.0.0
 - Schriftgröße der min/max Temperatur verkleinert
 - Bei Settings kann die Temperaturanzeige ein-/ausgeblendet werden
-- CZ translations hinzugefügt
+- CZ Übersetzung hinzugefügt
 
 Weitere Informationen, Hilfe und Probleme melden finden Sie unter <a href='https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay'>GitHub</a>.
 ]]>    </de>

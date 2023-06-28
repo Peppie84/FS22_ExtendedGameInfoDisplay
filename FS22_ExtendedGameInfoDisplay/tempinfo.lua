@@ -21,13 +21,21 @@ end
 ---and night text with the current min/max temperatur
 ---@param overwrittenFunc function
 function TempInfo:gameinfodisplay__updateTemperature(overwrittenFunc)
+    if g_currentMission.gameStarted == false then
+        return
+    end
+
     overwrittenFunc(self)
 
-    local minTemperatur, maxTemperatur = self.environment.weather:getCurrentMinMaxTemperatures()
-    local currentTemperatur = self.environment.weather:getCurrentTemperature()
+    local minTemperaturInC, maxTemperaturInC = self.environment.weather:getCurrentMinMaxTemperatures()
+    local currentTemperaturInC = self.environment.weather:getCurrentTemperature()
 
-    self.temperatureDayText = string.format("%d°", currentTemperatur)
-    self.temperatureNightText = string.format("%d°/%d°", maxTemperatur, minTemperatur)
+    local minTemperaturExpanded =  g_i18n:getTemperature(minTemperaturInC)
+    local maxTemperaturExpanded = g_i18n:getTemperature(maxTemperaturInC)
+    local currentTemperaturExpanded = g_i18n:getTemperature(currentTemperaturInC)
+
+    self.temperatureDayText = string.format('%d°', currentTemperaturExpanded)
+    self.temperatureNightText = string.format('%d°/%d°', maxTemperaturExpanded, minTemperaturExpanded)
 end
 
 ---Overwritten GameInfoDisplay:drawTemperatureText()
@@ -50,6 +58,6 @@ GameInfoDisplay.drawTemperatureText = Utils.overwrittenFunction(GameInfoDisplay.
 
 -- Change dimensions of the temp box
 GameInfoDisplay.SIZE.TEMPERATURE_BOX = {
-    92,
+    96,
     GameInfoDisplay.BOX_HEIGHT
 }
