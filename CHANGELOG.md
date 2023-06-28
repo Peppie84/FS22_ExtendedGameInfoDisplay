@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
+- currently nothing
 
-
-## [1.2.0.0] - #WARTET-AUF-MODHUB#
+## [1.2.0.0] - 2023-06-28
 - Added `l10n_hu.xml` by [ZsPetrovics](https://github.com/ZsPetrovics)
 - Fixed lua error while connecting to dedi-server - for [#10](https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay/issues/10)
 - Display temperatur also in Fahrenheit if set via settings - for [#12](https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay/issues/12)
@@ -24,5 +24,4 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 
 ## [1.0.0.0] - 2023-04-17
-
 - Initial release (https://www.farming-simulator.com/mod.php?mod_id=267536)
