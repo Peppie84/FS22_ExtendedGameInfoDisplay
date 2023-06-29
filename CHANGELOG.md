@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
-- currently nothing
+- Added `l10n_pl_.xml` by [dexus92](https://github.com/dexus92)
 
 ## [1.2.0.0] - 2023-06-28
 - Added `l10n_hu.xml` by [ZsPetrovics](https://github.com/ZsPetrovics)
