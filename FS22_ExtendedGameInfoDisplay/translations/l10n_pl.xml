@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <translationContributors>dexus</translationContributors>
+  <elements>
+    <e k="mod_title" v="Extended Game Infodisplay"/>
+    <e k="yearinfo_current_year" v="Rok"/>
+    <e k="settings_temperature_label" v="Temperatura"/>
+    <e k="settings_temperature_description" v="Przełącza widok bieżącej minimalnej &amp; maksymalnej temperatury w prawym górnym rogu hud."/>
+    <e k="settings_temperature_option1" v="Wł"/>
+    <e k="settings_temperature_option2" v="Wył"/>
+  </elements>
+</l10n>
