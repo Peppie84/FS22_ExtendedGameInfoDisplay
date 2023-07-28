@@ -3,6 +3,7 @@
 #
 $modDirectory = Split-Path -Path $pwd -Leaf
 $modName = "$modDirectory";
+$origModName = $modName
 $modDescFileName = "$modDirectory/modDesc.xml"
 $testRunnerLogPath = ".\.testrunner\"
 $readmeFilePath = "README.md"
@@ -28,6 +29,7 @@ if ($devVersionConfirmation -eq 'y') {
     $currentGitHash = ((git rev-parse --short HEAD) | Out-String).Trim()
     $newVersion = "$newVersion-$currentGitHash"
     $isDevelopmentVersion = 1
+    $modName = "$($origModName)_dev_release"
 }
 
 # Write new moddesc version
