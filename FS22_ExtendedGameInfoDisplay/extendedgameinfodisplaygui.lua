@@ -9,7 +9,7 @@
 --
 ExtendedGameInfoDisplayGui = {
     MOD_DIRECTORY = g_currentModDirectory,
-    MOD_SETTINGS_DIRECTORY = g_currentModSettingsDirectory .. '../',
+    MOD_SETTINGS_DIRECTORY =  getUserProfileAppPath() .. 'modSettings/',
     MOD_SETTINGS_FILENAME = 'ExtendedGameInfoDisplay.xml',
     MOD_SETTINGS_XML_ROOT_NODE = 'settings',
     CURRENT_MOD = g_currentModName or 'unknown',
