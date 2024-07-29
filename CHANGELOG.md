@@ -4,10 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
+
+
+## [1.3.0.1] - 2024-??-??
 - Fixed `MOD_SETTINGS_DIRECTORY` path for macs for [#28](https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay/issues/28)
 
 
-## [1.3.0.0] - 2023-06-18
+## [1.3.0.0] - 2024-06-18
 - Added `l10n_pl_.xml` by [dexus92](https://github.com/dexus92)
 - Added `l10n_es_.xml` by [Ferchu425](https://github.com/Ferchu425)
 - modDesc.xml descVersion update
