@@ -6,6 +6,7 @@
 -- value in the modSettings-folder.
 --
 -- Copyright (c) Peppie84, 2023
+-- https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay
 --
 ExtendedGameInfoDisplayGui = {
     MOD_DIRECTORY = g_currentModDirectory,

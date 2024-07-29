@@ -5,6 +5,7 @@
 -- and changed the information text elements.
 --
 -- Copyright (c) Peppie84, 2021
+-- https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay
 --
 TempInfo = {}
 
