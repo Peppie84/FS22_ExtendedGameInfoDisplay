@@ -5,6 +5,7 @@
 -- top right corner hud.
 --
 -- Copyright (c) Peppie84, 2021
+-- https://github.com/Peppie84/FS22_ExtendedGameInfoDisplay
 --
 YearInfo = {
     L10N_SYMBOLS = {

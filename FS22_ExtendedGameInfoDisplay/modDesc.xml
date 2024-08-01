@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <modDesc descVersion="80">
   <author>Peppie84</author>
-  <version>1.3.0.0</version>
+  <version>1.3.0.1</version>
   <title>
     <en>Extended Game Infodisplay</en>
     <de>Erweiterte Spiel-Infodarstellung</de>
@@ -9,6 +9,9 @@
   <description>
     <en><![CDATA[
 Expands the current GameInfoDisplay in the upper right corner by displaying the current year under the date and activates a hidden temperature feature with an indicator of whether the temperature is falling, staying constant or rising, the display of the current temperature. I also added the min/max temperature of the day.
+
+Changelog v1.3.0.1
+- Fix for saving the GameInfoDisplay settings on mac
 
 Changelog v1.3.0.0
 - Added ES translation
@@ -30,6 +33,9 @@ For more information, help, and reporting issues please visit <a href='https://g
 ]]></en>
     <de><![CDATA[
 Erweitert die aktuelle GameInfoDisplay oben rechts um die Anzeige des aktuellen Jahres unter dem Datum und aktiviert ein verstecktes Temperaturfeature mit einem Indikator ob die Temepratur fällt, gleich bleibt oder steigt, die Anzeige der aktuellen Temperatur und der min/max Temperatur des Tages.
+
+Changelog v1.3.0.1
+- Fix für das Speichern der GameInfoDisplay-Settings auf Macs
 
 Changelog v1.3.0.0
 - ES Übersetzung hinzugefügt
