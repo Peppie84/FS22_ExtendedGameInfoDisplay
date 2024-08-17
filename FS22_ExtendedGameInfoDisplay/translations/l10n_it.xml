@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <translationContributors>Rudolfet</translationContributors>
+  <elements>
+    <e k="mod_title" v="Visualizzazione estesa delle informazioni sul gioco"/>
+    <e k="yearinfo_current_year" v="Anno"/>
+    <e k="settings_temperature_label" v="Temperatura"/>
+    <e k="settings_temperature_description" v="Alterna la visualizzazione della temperatura corrente, minima e massima nell'angolo superiore destro dell'hud."/>
+    <e k="settings_temperature_option1" v="On"/>
+    <e k="settings_temperature_option2" v="Off"/>
+  </elements>
+</l10n>

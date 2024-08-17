@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+  <translationContributors>Rudolfet</translationContributors>
+  <elements>
+    <e k="mod_title" v="Affichage &eacute;tendu des informations sur le jeu"/>
+    <e k="yearinfo_current_year" v="Ann&eacute;e"/>
+    <e k="settings_temperature_label" v="Temp&eacute;ratures"/>
+    <e k="settings_temperature_description" 
+		v="Permet d'afficher la temp&eacute;rature actuelle, la temp&eacute;rature minimale et la temp&eacute;rature maximale dans le coin sup&eacute;rieur droit du HUD."/>
+    <e k="settings_temperature_option1" v="On"/>
+    <e k="settings_temperature_option2" v="Off"/>
+  </elements>
+</l10n>
