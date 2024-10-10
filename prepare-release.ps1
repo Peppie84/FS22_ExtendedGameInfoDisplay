@@ -60,4 +60,7 @@ if ($isDevelopmentVersion -eq '1') {
 
     $backupXmlData.Save( $xmlStreamWriter )
     $xmlStreamWriter.Close()
+
+    # Write new readme version
+    ((Get-Content -path $readmeFilePath -Raw) -replace "Modhub-v$newVersion","Modhub-v$currentVersion") | Set-Content -NoNewline -Path $readmeFilePath
 }
